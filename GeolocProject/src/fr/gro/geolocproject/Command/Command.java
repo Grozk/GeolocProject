@@ -7,9 +7,4 @@ public interface Command {
 		public void execute() {
 		}
 	};
-
-	public static final Command PSEUDONYME = new Command() {
-		public void execute() {
-		}
-	};
 }

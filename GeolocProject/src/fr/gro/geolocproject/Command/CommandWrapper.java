@@ -15,5 +15,4 @@ public class CommandWrapper implements DialogInterface.OnClickListener {
 		dialog.dismiss();
 		command.execute();
 	}
-
 }

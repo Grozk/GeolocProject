@@ -29,7 +29,7 @@
         android:weightSum="3" >
 
         <EditText
-            android:id="@+id/num_a_chercher"
+            android:id="@+id/layoutGauche_EditText_numAChercher"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="left"
@@ -38,7 +38,7 @@
             android:inputType="phone" />
 
         <Button
-            android:id="@+id/buttonRepertoire"
+            android:id="@+id/layoutGauche_buttonRepertoire"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="right"

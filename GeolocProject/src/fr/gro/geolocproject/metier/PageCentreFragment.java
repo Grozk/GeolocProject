@@ -26,26 +26,6 @@ public class PageCentreFragment extends Fragment {
 
 		ListView list = (ListView) v.findViewById(R.id.listViewContact);
 
-		// Defined Array values to show in ListView
-		// String[] values = new String[] { "Android List View",
-		// "Adapter implementation", "Simple List View In Android",
-		// "Create List View Android", "Android Example",
-		// "List View Source Code", "List View Array Adapter",
-		// "Android Example List View" };
-
-		// Define a new Adapter
-		// First parameter - Context
-		// Second parameter - Layout for the row
-		// Third parameter - ID of the TextView to which the data is written
-		// Forth - the Array of data
-		// if (values != null) {
-		// ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-		// getActivity(), android.R.layout.simple_list_item_1,
-		// android.R.id.text1, values);
-		// list.setAdapter(adapter);
-		// }
-
-
 		HttpClient rqtAjax = new HttpClient();
 		AsyncTask<String, Void, String> response = rqtAjax
 				.execute("Individus.json");
@@ -63,33 +43,20 @@ public class PageCentreFragment extends Fragment {
 		System.out.println(rep);
 		ParseListIndividuJson parserListIndividujson = new ParseListIndividuJson();
 
+		// parse de la reponse
 		ListIndividus li = parserListIndividujson.getListeIndividus(rep);
 
+		// initilisation du custom adapter pour les individus
 		ListIndividuAdapter listIndividuAdapter = new ListIndividuAdapter(this
 				.getActivity().getBaseContext(), li.getIndividus());
 		list.setAdapter(listIndividuAdapter);
 
 		TextView tv = (TextView) v.findViewById(R.id.pageCentreTextEmpty);
-		if (li.getIndividus() != null && li.getIndividus().isEmpty()) {
+		if (li.getIndividus() != null && !li.getIndividus().isEmpty()) {
 			tv.setVisibility(View.INVISIBLE);
 		} else {
 			tv.setVisibility(View.VISIBLE);
 		}
-
-		//
-		// if (li != null) {
-		// ArrayAdapter<String> adapter = new ArrayAdapter<String>(
-		// getActivity(), android.R.layout.simple_list_item_1,
-		// android.R.id.text1, li);
-		// list.setAdapter(adapter);
-		// }
-		//
-		// TextView tv = (TextView) v.findViewById(R.id.pageCentreTextEmpty);
-		// if (li != null && li.length != 0) {
-		// tv.setVisibility(View.INVISIBLE);
-		// } else {
-		// tv.setVisibility(View.VISIBLE);
-		// }
 
 		// for (Individu ind : li.getIndividus()) {
 		// System.out.println(ind.getIndividu().getIdIndividuGenere());
