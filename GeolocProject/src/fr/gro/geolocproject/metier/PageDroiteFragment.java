@@ -50,9 +50,10 @@ public class PageDroiteFragment extends Fragment implements OnClickListener {
 			SharedPreferences.Editor editor = prfs.edit();
 			editor.putBoolean("isFirstTime", false);
 			editor.commit();
+			mButtonInscription.setEnabled(true);
 		} else {
 			miseAjourPseudo();
-
+			mButtonInscription.setEnabled(false);
 		}
 
 
@@ -69,7 +70,7 @@ public class PageDroiteFragment extends Fragment implements OnClickListener {
 			break;
 		case R.id.layoutPageExplication_buttonPartageApplication:
 			// show QRCode
-			Toast.makeText(getActivity(), "Show QRCode à coder.",
+			Toast.makeText(getActivity(), "Show QRCode a coder.",
 					Toast.LENGTH_LONG).show();
 			break;
 		}
@@ -78,7 +79,7 @@ public class PageDroiteFragment extends Fragment implements OnClickListener {
 	private void miseAjourPseudo() {
 		//
 		String pseudo = prfs.getString("pseudo", "");
-		tvPseudo.setText("Vous êtes inscrit avec le pseudo : " + pseudo);
+		tvPseudo.setText("Vous etes inscrit avec le pseudo : " + pseudo);
 	}
 
 	public void createProfil(String pseudo) {

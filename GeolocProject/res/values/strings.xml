@@ -6,5 +6,6 @@
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_multi_select_contact">MultiSelectContact</string>
     <string name="title_activity_list_contact">ListContactActivity</string>
+    <string name="title_activity_gps_viewer">GpsViewerActivity</string>
 
 </resources>

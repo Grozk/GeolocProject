@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
@@ -12,54 +11,68 @@
         android:layout_gravity="center"
         android:layout_margin="20dp"
         android:text="Inscription" />
-    
-        
-    <View
-    android:layout_width="fill_parent"
-    android:layout_height="1dp"
-    android:background="@android:color/darker_gray"/>
 
-        <View
-    android:layout_width="fill_parent"
-    android:layout_height="5dp"
-    />
-        
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5dp" />
+
     <TextView
-            android:id="@+id/layoutPageInscription_TextviewPseudo"
+        android:id="@+id/layoutPageInscription_TextviewPseudo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-            android:text="Vous n'êtes pas encore inscrit."/>
-    
-    
-        <View
-    android:layout_width="fill_parent"
-    android:layout_height="15dp"
-    />
-        
+        android:text="Vous n&apos;êtes pas encore inscrit." />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="100dp" />
+
     <TextView
-            android:id="@+id/layoutPageInscription_textview_explications"
+        android:id="@+id/layoutPageInscription_textview_explications"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-            android:text="Cette application permet de localiser vos contacts s'ils sont inscrits sur l'application.
-            				Le premier écran (double glissement à gauche) permet de rechercher et d'inviter vos amis.
-            				l'écran principal (un seul glissement à gauche) affiche la liste de vos amis."/>
+        android:text="Cette application permet de localiser vos contacts s&apos;ils sont inscrits sur l&apos;application."/>
     
     
-        <View
-    android:layout_width="fill_parent"
-    android:layout_height="25dp"
-    />
-        
+    <TextView
+        android:id="@+id/layoutPageInscription_textview_explications1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1- Cet écran permet d'inviter ou d'ajouter des amis à votre liste de suivi."/>
+    
+	    <TextView
+        android:id="@+id/layoutPageInscription_textview_explications2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 - Cet écran est l'écran principal et permet de savoir en temps réel dans quelle direction se trouvent vos amis." />
+    
+	        <TextView
+        android:id="@+id/layoutPageInscription_textview_explications3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 - Cet écran sur lequel vous êtes permet de vous inscrire sur l'application et de partager celle ci facilement à l'aide du QRCode." />
+	    
+    
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="15dp" />
+
     <Button
         android:id="@+id/layoutPageInscription_buttonInscription"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Je m'inscris !" />
-  
+        android:gravity="center"
+        android:text="Je m&apos;inscris !" />
+
     <Button
         android:id="@+id/layoutPageExplication_buttonPartageApplication"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Je partage l&apos;application!" />
-    
+
 </LinearLayout>

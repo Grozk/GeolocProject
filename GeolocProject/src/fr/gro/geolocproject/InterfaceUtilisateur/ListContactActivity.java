@@ -145,7 +145,13 @@ public class ListContactActivity extends ListActivity implements OnClickListener
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
-		((ListContactObject)mList.getItemAtPosition(arg2)).setChecked(true);
+		ListContactObject obj =((ListContactObject)mList.getItemAtPosition(arg2));
+		if (!obj.isChecked()){
+			obj.setChecked(true);
+		} else {
+			obj.setChecked(false);
+		}
+		
 		mAdapter.notifyDataSetChanged();
 		}
 
